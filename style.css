@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+	padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+.navbar {
+    z-index: 999;
+    position: fixed;
+    background-color: #e0eeee;
+    width: 100%;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar .menu li a{
+    color: black;
+    font-size: x-large;
+    font-family: 'Oxygen', sans-serif;
+    padding: 20px;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar .menu li a:hover {
+    background-color: #08e8de;
+    color: white;
+}
+
+.navbar .menu-btn {
+    font-size: 23px;
+    cursor: pointer;
+    float: right;
+    margin-left: auto;
+	padding: 10px;
+    display: none;
+}
+
+.home {
+	animation: appear 2s;
+}
+
+.home-container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .home-container img {
+	 max-height: 100%;
+	 max-width: 100%;
+ }
+
+ .home p {
+	color: black; 
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 150pts;
+	font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    overflow: hidden;
+ }
+
+.brownies {
+	margin-top: 120px;
+	background-color: #08e8de;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+.headings {
+	text-align: center;
+	letter-spacing: 2pt;
+	border-bottom: 3.5px solid white;
+	font-size: 4rem;
+}
+
+.container {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 40px;
+	overflow: hidden;
+}
+
+.container .column {
+	margin: 60px auto 60px auto;
+	width: 24%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	transition: .1s ease;
+}
+
+.container .column-min {
+}
+
+.container .column:hover {
+	border: 1px solid white;
+	box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+	border-radius: 13px;
+}
+
+.container .column .description {
+	margin-bottom: 2px;
+}
+
+.column .item-tab {
+	width: 100%;
+	position: relative;
+}
+
+.item-tab .overlay {
+	opacity: 0;	
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	transition: 0.4s ease-in-out;
+	background-color: rgba(255, 255, 255, 0.77);
+	color: black;
+	padding: 10px;
+	border-radius: 13px;
+}	
+
+.item-tab:hover .overlay {
+	opacity: 1;
+}
+
+.item-tab:hover img {
+	opacity: 0.2;	
+}
+
+.description {
+	margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.button {
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	width: 31px;
+}
+
+.button i {
+	font-size: 48px;
+	color: white;
+}
+
+.cakes {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.cakes .cake-container {
+	width: 48%;
+	margin: 10px auto 30px auto;	
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #e0eeee;
+	transition: 0.2s;
+}
+
+.cakes .cake-container:hover {
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cake-container-left-text {
+	font-size: 1.1rem;
+	font-weight: bolder;
+	padding: 5px;
+}
+
+.cake-container-left img {
+	border-bottom: 1px solid black;
+}
+
+.cake-container-left {
+	border: 1px black solid;
+	margin: 0 10px 0 0;
+}
+
+.customized {
+	margin-top: 120px;
+	background-color: #08e8de;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+.inner-container {
+	width: 80%;
+	margin: auto;
+}
+
+.slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.mySlides img {
+	height: 100%;
+	width: 100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  top: 50%;
+  width: auto;
+  position: absolute;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: -40px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+	left: -40px;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 3rem;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+	background-color: #717171;
+}
+
+.active {
+	background-color: #717171;
+}
+
+.contact {
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.split {
+	width: 50%;
+}
+
+@keyframes fade {
+	from {
+  		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+   
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .navbar .menu-btn {
+        padding-top: 10px;
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: white ;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        transition: 0.3s ease-out;
+    }
+
+    .navbar .menu-active{
+        left: 0;
+        transition: 0.3s ease-in;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 0;
+        transition: 0.5s ease-in;
+    }
+
+    .navbar .menu li a:hover {
+        font-size: 30px;
+        color: black;
+        background-color: white;
+    }
+
+	.home p {
+		font-size: 1rem;
+	}
+}
+
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 10px;
+    }
+
+    .navbar .menu-btn {
+        padding-top: 10px;
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: white ;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        transition: 0.3s ease-out;
+    }
+
+    .navbar .menu-active{
+        left: 0;
+        transition: 0.3s ease-in;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 0;
+        transition: 0.5s ease-in;
+    }
+
+    .navbar .menu li a:hover {
+        font-size: 30px;
+        color: black;
+        background-color: white;
+    }
+
+	.home p {
+		font-size: 1rem;
+	}
+
+}
