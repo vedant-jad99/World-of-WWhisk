@@ -1,43 +1,27 @@
-let slideIndex = 0;
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-let myTimer;
-
-function showSlides(slideIndex) {
-	let i;
-  	for (i = 0; i < slides.length; i++) {
-    	slides[i].style.display = "none";
-    	dots[i].className = dots[i].className.replace(" active", "");
-  	}
-	slideIndex++;
-
-  	if (slideIndex > slides.length) {
-		slideIndex = 1
-	}
-  	slides[slideIndex - 1].style.display = "block";
-  	dots[slideIndex - 1].className += " active";
-	myTimer = setTimeout(showSlides, 5000);
-}
-
-function currentSlide(no) {
-	let i;
-	for(i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-    	dots[i].className = dots[i].className.replace(" active", "");
-	}
-	slideIndex = no;
-	slides[no - 1].style.display = "block";
-	dots[no - 1].className += "active";
-	clearTimeout(myTimer);
-	myTimer = setTimeout(showSlides, 5000);
-}
+let slideIndex = 1;
 
 function plusSlides(n) {
-	let newSlideIndex = slideIndex + n;
-	console.log(newSlideIndex);
-	if(newSlideIndex < slides.length && newSlideIndex > 0) {
-		currentSlide(newSlideIndex);
-	}
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
 
 function display_on () {
@@ -61,6 +45,24 @@ function ViewMore() {
 			menu[i].style.display = "flex";
 		}
 	}
+}
+
+function sendMail() {
+	var name = document.getElementById("name").value;
+	var email = document.getElementById("email").value;
+	var occassion = document.getElementById("occassion").value;
+	var date = document.getElementById("date").value;
+	var textarea = document.getElementById("message").value;
+	var message = "Name: " + name + "%0A" + "Email: " + email + "%0A" + "Occasion: " + occassion + "%0A" + "Date: " + date + "%0A" + "Message: " + textarea + "%0A";
+
+
+	document.getElementById("name").value = "";
+	document.getElementById("email").value = "";
+	document.getElementById("occassion").value = "";
+	document.getElementById("date").value = "";
+	document.getElementById("message").value = "";
+
+	window.open('mailto:chefsara8910@gmail.com?subject=Heyy! Make my celebration go WWow!&body=' + message);
 }
 
 $(document).ready(function() {
