@@ -420,7 +420,7 @@ section {
   background: #fff;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
   border-radius: 5px;
-  max-width: 480px;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5px;
@@ -506,7 +506,7 @@ section {
 .formEntry {
   display: block;
   margin: 30px auto;
-  min-width: 300px;
+  width: 80%;
   padding: 10px;
   border-radius: 2px;
   border: none;
@@ -722,6 +722,10 @@ section {
 	.wow-container ul > li {
 		width: 48%;
 	}
+
+	.form {
+		width: 60%;
+	}
 }
 
 @media (max-width: 991px) {
@@ -803,6 +807,10 @@ section {
 	.wow-container ul > li {
 		width: 100%;
 	}
+
+	.form {
+		width: 70%;
+	}
 }
 
 @media (max-width: 770px) {
@@ -859,11 +867,19 @@ section {
 	.cakes .cake-container-col {
 		width: 70%;
 	}
+
+	.form {
+		width: 80%;
+	}
 }
 
 @media (max-width: 740px) {
 	.cakes .cake-container-col {
 		width: 80%;
+	}
+
+	.form {
+		width: 100%;
 	}
 }
 
