@@ -27,6 +27,7 @@ function showSlides(n) {
 function display_on () {
 	var home = document.getElementById("home-para");
 	home.style.color = "black";
+	console.log(home);
 	home.style.animation = "fade-in 3s";
 }
 
