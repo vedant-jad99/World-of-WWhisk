@@ -65,6 +65,7 @@ section {
 
 .home {
 	animation: appear 2s;
+	padding-bottom: 220px;
 }
 
 .home-container {
@@ -80,7 +81,7 @@ section {
  }
 
  .home p {
-	color: black; 
+	color: brown; 
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 150pts;
@@ -90,7 +91,6 @@ section {
  }
 
 .brownies {
-	margin-top: 120px;
 	background-color: #08e8de;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
@@ -129,7 +129,7 @@ section {
 
 .container .column {
 	margin: 60px auto 60px auto;
-	width: 24%;
+	width: 30%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -166,6 +166,7 @@ section {
 	color: black;
 	padding: 10px;
 	border-radius: 13px;
+	font-size: 1.15rem;
 }	
 
 .item-tab:hover .overlay {
@@ -173,7 +174,7 @@ section {
 }
 
 .item-tab:hover img {
-	opacity: 0.2;	
+	opacity: 0.1;	
 }
 
 .description {
@@ -199,6 +200,13 @@ section {
 
 .cakes {
 	font-family: 'Montserrat', sans-serif;
+	background-color: rgba(219, 223, 253, 0.5);
+}
+
+.wow {
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgba(219, 223, 253, 0.5);
+	color: black;
 }
 
 .cakes .cake-container {
@@ -281,7 +289,6 @@ section {
 }
 
 .customized {
-	margin-top: 120px;
 	background-color: #08e8de;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
@@ -544,6 +551,32 @@ section {
 	display: block;
 }
 
+.switch {
+	display: none;
+}
+
+.switch2 {
+	display: block;
+}
+
+.wow-container {
+	margin-top: 60px;
+	font-size: 1.3rem;
+	padding: 60px;
+}
+
+.wow-container ul > li {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+	padding: 20px;
+}
+
+.wow-container li:hover {
+	font-size: 1.5rem;
+	transition: 0.5s ease;
+}	
+
 @keyframes bounce {
   0% {
     tranform: translate(0, 4px);
@@ -585,6 +618,48 @@ section {
 @media (max-width: 1300px) {
 	.cakes .cake-container {
 		width: 60%;
+	}
+
+    .navbar .menu-btn {
+        padding-top: 10px;
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: white ;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        transition: 0.3s ease-out;
+    }
+
+    .navbar .menu-active{
+        left: 0;
+        transition: 0.3s ease-in;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 0;
+        transition: 0.5s ease-in;
+    }
+
+    .navbar .menu li a:hover {
+        font-size: 30px;
+        color: black;
+        background-color: white;
+    }
+
+	.wow-container ul > li {
+		width: 48%;
 	}
 }
 
@@ -634,6 +709,10 @@ section {
         color: black;
         background-color: white;
     }
+
+	.wow-container ul > li {
+		width: 48%;
+	}
 }
 
 @media (max-width: 991px) {
@@ -702,6 +781,18 @@ section {
 
 	.off {
 		display: none;
+	}
+
+	.switch2 {
+		display: none;
+	}
+
+	.switch {
+		display: block;
+	}
+
+	.wow-container ul > li {
+		width: 100%;
 	}
 }
 

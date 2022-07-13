@@ -37,7 +37,7 @@ function Toggle() {
 
 function ViewMore() {
 	var menu = document.getElementsByClassName("column");
-	for(let i = 4; i < 10; i++) {
+	for(let i = 3; i < 10; i++) {
 		if(menu[i].style.display != "none") {
 			menu[i].style.display = "none";
 		}
