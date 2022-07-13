@@ -49,15 +49,20 @@ function ViewMore() {
 
 function sendMail() {
 	var name = document.getElementById("name").value;
-	var email = document.getElementById("email").value;
+	console.log(name);
+	var email = document.getElementById("phone").value;
+	console.log(email);
 	var occassion = document.getElementById("occassion").value;
+	console.log(occassion);
 	var date = document.getElementById("date").value;
+	console.log(date);
 	var textarea = document.getElementById("message").value;
+	console.log(textarea);
 	var message = "Name: " + name + "%0A" + "Email: " + email + "%0A" + "Occasion: " + occassion + "%0A" + "Date: " + date + "%0A" + "Message: " + textarea + "%0A";
 
 
 	document.getElementById("name").value = "";
-	document.getElementById("email").value = "";
+	document.getElementById("phone").value = "";
 	document.getElementById("occassion").value = "";
 	document.getElementById("date").value = "";
 	document.getElementById("message").value = "";
