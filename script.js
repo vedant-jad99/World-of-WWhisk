@@ -65,7 +65,7 @@ function sendMail() {
 
 	window.open('mailto:chefsara8910@gmail.com?subject=Heyy! Make my celebration go WWow!&body=' + message);
 }
-
+/*
 $(document).ready(function() {
 	$('#view-more-on').click(function() {
 		$('.column-min').slideDown('fast');
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		arrow2.style.display = "none";
 	});
 });
-
+*/
 window.onload = function() {
 	setTimeout(display_on, 100);
 	ViewMore();
