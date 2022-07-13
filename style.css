@@ -721,7 +721,7 @@ section {
 
 @media (max-width: 991px) {
     .max-width {
-        padding: 0 50px;
+        padding: 0 30px;
     }
 
     .navbar .menu-btn {
@@ -763,11 +763,11 @@ section {
     }
 
 	.home p {
-		font-size: 1rem;
+		font-size: 1.8rem;
 	}
 
 	.container .column {
-		width: 45%;
+		width: 51%;
 	}
 
 	.cakes .cake-container {
@@ -802,7 +802,7 @@ section {
 
 @media (max-width: 770px) {
     .max-width {
-        padding: 0 50px;
+        padding: 0 10px;
     }
 
     .navbar .menu-btn {
@@ -844,11 +844,11 @@ section {
     }
 
 	.home p {
-		font-size: 1rem;
+		font-size: 1.8rem;
 	}
 
 	.container .column {
-		width: 45%;
+		width: 51%;
 	}
 
 	.cakes .cake-container-col {
