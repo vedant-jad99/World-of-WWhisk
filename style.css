@@ -66,6 +66,9 @@ section {
 .home {
 	animation: appear 2s;
 	padding-bottom: 220px;
+	background-image: url('images/bg.png');
+	background-repeat: repeat-y;
+	background-size: cover;
 }
 
 .home-container {
