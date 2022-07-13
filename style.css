@@ -87,6 +87,8 @@ section {
     letter-spacing: 150pts;
 	font-family: 'Montserrat', sans-serif;
     text-align: center;
+	padding: 0;
+	margin: auto;
     overflow: hidden;
  }
 
@@ -200,12 +202,12 @@ section {
 
 .cakes {
 	font-family: 'Montserrat', sans-serif;
-	background-color: rgba(219, 223, 253, 0.5);
+	background-color: rgba(219, 223, 253, 0.8);
 }
 
 .wow {
 	font-family: 'Montserrat', sans-serif;
-	background-color: rgba(219, 223, 253, 0.5);
+	background-color: rgba(219, 223, 253, 0.8);
 	color: black;
 }
 
@@ -569,7 +571,9 @@ section {
 	display: inline-block;
 	width: 33%;
 	text-align: center;
+	font-weight: 1000;
 	padding: 20px;
+	font-size: 1.4rem;
 }
 
 .wow-container li:hover {
@@ -907,7 +911,7 @@ section {
     }
 
 	.home p {
-		font-size: 1rem;
+		font-size: 1.8rem;
 	}
 
 	.container .column {
